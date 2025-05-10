@@ -1,0 +1,383 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: lavender;
+    user-select: none;
+}
+.search-box {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    margin:10px;
+}
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+
+}
+.navigation a {
+    position: relative;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    cursor:pointer;
+}
+.hidden-content {
+    display: none; 
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .btntrangchu-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #080000;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .btnlogin-popup
+{
+    border-radius: 15px;
+    width: 65px;
+    height: 30px;
+    cursor:pointer;
+
+}
+
+.navigation .btnlogin-popup:hover {
+    background: #fff;
+    color: black;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: rgb(253, 230, 229);
+}
+
+.DSNT {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 100px; /* chừa khoảng cho footer */
+    margin-top: 100px;
+}
+
+
+.NT1 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.NT1-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT1-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.NT1-left img.active {
+    display: block;
+}
+
+.NT1-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.NT2 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.NT2-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT2-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.NT2-left img.active {
+    display: block;
+}
+
+.NT2-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.NT3 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.NT3-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT3-left video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.NT3-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.NT4 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.NT4-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT4-left iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.NT4-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.NT5 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.NT5-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT5-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.NT5-left img.active {
+    display: block;
+}
+
+.NT5-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.NT6 {
+    display: flex;
+    width: 600px;
+    height: 232px;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.NT6-left {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.NT6-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.NT6-left img.active {
+    display: block;
+}
+
+.NT6-right {
+    flex: 7;
+    padding: 10px;
+}
+
+.bo-loc {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    width: 360px;
+    height: 260px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 10;
+}
+
+.bo-loc h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #001F3F; /* Xanh Navy */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #3EB489; /* Xanh Bạc Hà */
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Chia đều khoảng cách */
+}
+
+.footer-column {
+    width: 22%; /* Chia 4 cột */
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3EB489; /* Xanh Bạc Hà */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #3EB489; /* Xanh Bạc Hà */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white; /* Đổi sang trắng khi hover */
+}
+
+.payment-methods img, .social-icons img {
+    width: 40px;
+    margin-right: 8px;
+}
+

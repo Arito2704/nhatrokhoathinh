@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh giá</title>
+    <link rel="stylesheet" href="danh_gia.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">NhaTroKhoaThinh.com</h2>
+        <nav class="navigation">
+            <a href="index.html">Trang chủ</a>
+            <a href="lien_he.html" class="btnlienhe-popup">Liên Hệ</a>
+            <a href="dich_vu.html">Dịch vụ</a>
+            <a href="Quan-li-thue-phong.html">Tin đã lưu </a>
+            <a href="Dang_tin.html">Đăng tin </a>
+            <a href="danh-gia.html" class="btndanhgia-popup">Đánh giá</a>
+            <a href="khuyen_mai.html">Khuyến mãi </a>
+            <input type="text" class="search-box" placeholder="Tìm kiếm...">
+            <a href="dang_nhap_dang_ky.html">
+                <button class="btnlogin-popup">Login</button>
+            </a>
+        </nav>
+    </header>
+
+    <div class="Khung_danh_gia">
+        <h2 style="text-align: center; margin-top: 20px;">Đánh giá dịch vụ của chúng tôi</h2>
+    
+        <div class="rating" id="rating" style="text-align: center; margin-top: 30px;">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5" data-desc="Tuyệt vời">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" data-desc="Tốt">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" data-desc="Bình thường">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" data-desc="Tệ">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" data-desc="Rất tệ">★</label>
+        </div>
+    
+        <div id="description" style="text-align: center; font-size: 18px; color: #333; margin-top: 10px; min-height: 24px;"></div>
+    
+        <div style="text-align: center; margin-top: 30px;">
+            <textarea placeholder="Viết đánh giá của bạn..." rows="5" cols="70" style="padding: 10px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+        </div>
+    
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="alert('Đã gửi thành công <3')" style="padding: 10px 25px; font-size: 16px; background-color: #ff9999; border: none; border-radius: 8px; color: white; cursor: pointer;">
+                Gửi đánh giá
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>VỀ NHATROKHOATHINH.COM</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Quy định sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="lien_he.html">Liên hệ</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>DÀNH CHO KHÁCH HÀNG</h3>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Hướng dẫn đăng tin</a></li>
+                    <li><a href="#">Bảng giá dịch vụ</a></li>
+                    <li><a href="#">Quy định đăng tin</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+                <div class="payment-methods">
+                    <img src="momo.png" alt="MoMo">
+                    <img src="visa.png" alt="Visa">
+                    <img src="master_card.jpg" alt="MasterCard">
+                    <img src="bank.png" alt="Ngân hàng">
+                </div>
+            </div>
+    
+            <div class="footer-column">
+                <h3>THEO DÕI NHATROKHOATHINH.COM</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/trinh.khoa.9083?locale=vi_VN"><img src="facebook.jpg" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/"><img src="youtube.png" alt="YouTube"></a>
+                    <a href="https://chat.zalo.me/"><img src="zalo.png" alt="Zalo"></a>
+                    <a href="https://www.tiktok.com/vi-VN/"><img src="tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const labels = document.querySelectorAll('.rating label');
+        const descBox = document.getElementById('description');
+    
+        labels.forEach(label => {
+            label.addEventListener('mouseenter', () => {
+                descBox.textContent = label.getAttribute('data-desc');
+            });
+            label.addEventListener('mouseleave', () => {
+                descBox.textContent = '';
+            });
+        });
+    </script>
+
+</body>
+</html>
